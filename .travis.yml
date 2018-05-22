@@ -1,9 +1,7 @@
 language: cpp
-
 compiler:
   - clang
   - gcc
-
 matrix:
   include:
     - os: linux
@@ -16,5 +14,4 @@ matrix:
   include:
     - os: osx
       osx_image: xcode8
-
 script: cd src && make -f makefile.unix
