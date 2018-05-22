@@ -1,0 +1,20 @@
+language: cpp
+
+compiler:
+  - clang
+  - gcc
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      compiler: gcc
+  include:
+    - os: linux
+      dist: trusty
+      compiler: clang
+  include:
+    - os: osx
+      osx_image: xcode8
+
+script: cd src && make -f makefile.unix
