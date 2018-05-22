@@ -71,7 +71,7 @@ Dependencies for i386, amd64
 Dependencies for armv6l, armv7l
 ------------
 
- Library      | Purpose           Description
+ Library      | Purpose           | Description
  -------------|-------------------|----------------------
  libssl       | SSL Support       | Secure communications
  libdb4.8     | Berkeley DB       | Blockchain & wallet storage
