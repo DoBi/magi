@@ -7,11 +7,42 @@ matrix:
     - os: linux
       dist: trusty
       compiler: gcc
+      addons:
+        apt:
+          update: true
+          packages: 
+          - build-essential 
+          - libtool 
+          - autotools-dev 
+          - autoconf 
+          - automake
+          - libssl-dev
+          - libdb4.8-dev
+          - libdb4.8++-dev
+          - libgmp-dev
+          - libminiupnpc-dev
+          - libboost-all-dev
+          - libprotobuf-dev 
+          - libqrencode-dev
   include:
     - os: linux
       dist: trusty
       compiler: clang
-  include:
-    - os: osx
-      osx_image: xcode8
+      addons:
+        apt:
+          update: true
+          packages: 
+          - build-essential 
+          - libtool
+          - autotools-dev 
+          - autoconf 
+          - automake
+          - libssl-dev
+          - libdb4.8-dev
+          - libdb4.8++-dev
+          - libgmp-dev
+          - libminiupnpc-dev
+          - libboost-all-dev
+          - libprotobuf-dev 
+          - libqrencode-dev
 script: cd src && make -f makefile.unix
